@@ -1,0 +1,667 @@
+[
+    {
+        "id": "d0beb3e5b3b6e53c",
+        "type": "tab",
+        "label": "RS485 Modbus RTU ",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "75beb9d9.444ee",
+        "type": "modbus-client",
+        "name": "",
+        "clienttype": "simpleser",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": false,
+        "tcpHost": "192.168.2.150",
+        "tcpPort": "502",
+        "tcpType": "TCP-RTU-BUFFERED",
+        "serialPort": "/dev/ttyUSB0",
+        "serialType": "RTU",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "500",
+        "serialAsciiResponseStartDelimiter": "",
+        "unit_id": "3",
+        "commandDelay": "10",
+        "clientTimeout": "5000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "1000",
+        "parallelUnitIdsAllowed": false
+    },
+    {
+        "id": "2a9e959b249e3e69",
+        "type": "ui_tab",
+        "name": "KPCL LINGANAMAKKI DAM POWER HOUSE",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f529c79dd698d2d1",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "051fc48914350c71",
+        "type": "ui_group",
+        "name": "Talakale Dam Level",
+        "tab": "2a9e959b249e3e69",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "8d1ce75bde9c2406",
+        "type": "ui_group",
+        "name": "Tail Race Level",
+        "tab": "2a9e959b249e3e69",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "398866ddbdcfcd14",
+        "type": "ui_group",
+        "name": "Head Race Level",
+        "tab": "2a9e959b249e3e69",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "f0cd0d5ff09c4e15",
+        "type": "ui_spacer",
+        "z": "d0beb3e5b3b6e53c",
+        "name": "spacer",
+        "group": "8d1ce75bde9c2406",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8e7c2a14875a8543",
+        "type": "ui_spacer",
+        "z": "d0beb3e5b3b6e53c",
+        "name": "spacer",
+        "group": "8d1ce75bde9c2406",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "fb3a8fe1811e0593",
+        "type": "ui_spacer",
+        "z": "d0beb3e5b3b6e53c",
+        "name": "spacer",
+        "group": "051fc48914350c71",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "ce69c3dd3f757a0c",
+        "type": "ui_spacer",
+        "z": "d0beb3e5b3b6e53c",
+        "name": "spacer",
+        "group": "398866ddbdcfcd14",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "142920425c2e662f",
+        "type": "ui_spacer",
+        "z": "d0beb3e5b3b6e53c",
+        "name": "spacer",
+        "group": "398866ddbdcfcd14",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "17689dfe908fe43e",
+        "type": "ui_spacer",
+        "z": "d0beb3e5b3b6e53c",
+        "name": "spacer",
+        "group": "051fc48914350c71",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "18cbdbe451532842",
+        "type": "modbus-read",
+        "z": "d0beb3e5b3b6e53c",
+        "name": "",
+        "topic": "",
+        "showStatusActivities": true,
+        "logIOActivities": false,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "1",
+        "rate": "3000",
+        "rateUnit": "ms",
+        "delayOnStart": true,
+        "startDelayTime": "10",
+        "server": "75beb9d9.444ee",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "66d0c1854bce406d"
+            ],
+            [
+                "7d875ac06f79dbe2"
+            ]
+        ]
+    },
+    {
+        "id": "7d875ac06f79dbe2",
+        "type": "modbus-response",
+        "z": "d0beb3e5b3b6e53c",
+        "name": "",
+        "registerShowMax": "8",
+        "x": 410,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "19d4591ac908ac49",
+        "type": "modbus-read",
+        "z": "d0beb3e5b3b6e53c",
+        "name": "",
+        "topic": "",
+        "showStatusActivities": true,
+        "logIOActivities": false,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "8",
+        "rate": "3000",
+        "rateUnit": "ms",
+        "delayOnStart": true,
+        "startDelayTime": "10",
+        "server": "75beb9d9.444ee",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 270,
+        "y": 500,
+        "wires": [
+            [
+                "d20e268b463dc2cd"
+            ],
+            [
+                "5bd6548a0017dbaf"
+            ]
+        ]
+    },
+    {
+        "id": "5bd6548a0017dbaf",
+        "type": "modbus-response",
+        "z": "d0beb3e5b3b6e53c",
+        "name": "",
+        "registerShowMax": "8",
+        "x": 510,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "6e8b1f03f83bc481",
+        "type": "modbus-response",
+        "z": "d0beb3e5b3b6e53c",
+        "name": "",
+        "registerShowMax": "20",
+        "x": 570,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "5ff49d26952ff15f",
+        "type": "modbus-read",
+        "z": "d0beb3e5b3b6e53c",
+        "name": "",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "3",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "8",
+        "rate": "3000",
+        "rateUnit": "ms",
+        "delayOnStart": true,
+        "startDelayTime": "5",
+        "server": "75beb9d9.444ee",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 250,
+        "y": 740,
+        "wires": [
+            [
+                "4da72abbb8e9f423"
+            ],
+            [
+                "6e8b1f03f83bc481"
+            ]
+        ]
+    },
+    {
+        "id": "66d0c1854bce406d",
+        "type": "buffer-parser",
+        "z": "d0beb3e5b3b6e53c",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "int16be",
+                "name": "item1",
+                "offset": 0,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "0.01",
+                "mask": ""
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "keyvalue",
+        "resultTypeType": "return",
+        "multipleResult": false,
+        "fanOutMultipleResult": false,
+        "setTopic": true,
+        "outputs": 1,
+        "x": 270,
+        "y": 100,
+        "wires": [
+            [
+                "5bbfa1abec55f539"
+            ]
+        ]
+    },
+    {
+        "id": "d20e268b463dc2cd",
+        "type": "buffer-parser",
+        "z": "d0beb3e5b3b6e53c",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "floatbe",
+                "name": "item1",
+                "offset": 2,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "+ 6",
+                "mask": ""
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "keyvalue",
+        "resultTypeType": "return",
+        "multipleResult": false,
+        "fanOutMultipleResult": false,
+        "setTopic": true,
+        "outputs": 1,
+        "x": 310,
+        "y": 420,
+        "wires": [
+            [
+                "7d27d219a79fbb61",
+                "a07bb95b004be26a"
+            ]
+        ]
+    },
+    {
+        "id": "7d27d219a79fbb61",
+        "type": "debug",
+        "z": "d0beb3e5b3b6e53c",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "f9ec8a9b3d858443",
+        "type": "ui_gauge",
+        "z": "d0beb3e5b3b6e53c",
+        "name": "Talakalale Dam Level",
+        "group": "051fc48914350c71",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "",
+        "label": "Feet",
+        "format": "{{msg.payload.item1}}",
+        "min": 0,
+        "max": "2000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 600,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "a07bb95b004be26a",
+        "type": "ui_gauge",
+        "z": "d0beb3e5b3b6e53c",
+        "name": "Head Race Levl",
+        "group": "398866ddbdcfcd14",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "",
+        "label": "Feet",
+        "format": "{{msg.payload.item1}}",
+        "min": 0,
+        "max": "2000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 580,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "9dce4855620653b8",
+        "type": "ui_gauge",
+        "z": "d0beb3e5b3b6e53c",
+        "name": "Tail Race Level",
+        "group": "8d1ce75bde9c2406",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "",
+        "label": "Feet",
+        "format": "{{msg.payload.item1}}",
+        "min": 0,
+        "max": "2000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 560,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "07eccc9d5df8200a",
+        "type": "debug",
+        "z": "d0beb3e5b3b6e53c",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "4da72abbb8e9f423",
+        "type": "buffer-parser",
+        "z": "d0beb3e5b3b6e53c",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "floatbe",
+                "name": "item1",
+                "offset": 2,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "0",
+                "mask": ""
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "keyvalue",
+        "resultTypeType": "return",
+        "multipleResult": false,
+        "fanOutMultipleResult": false,
+        "setTopic": true,
+        "outputs": 1,
+        "x": 310,
+        "y": 660,
+        "wires": [
+            [
+                "9dce4855620653b8",
+                "07eccc9d5df8200a"
+            ]
+        ]
+    },
+    {
+        "id": "269d844d89b1496b",
+        "type": "debug",
+        "z": "d0beb3e5b3b6e53c",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "5bbfa1abec55f539",
+        "type": "change",
+        "z": "d0beb3e5b3b6e53c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.item1",
+                "pt": "msg",
+                "to": "(payload.item1)+1600",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 140,
+        "wires": [
+            [
+                "269d844d89b1496b",
+                "f9ec8a9b3d858443"
+            ]
+        ]
+    },
+    {
+        "id": "6dabecd0bc3a864e",
+        "type": "ui_template",
+        "z": "d0beb3e5b3b6e53c",
+        "group": "051fc48914350c71",
+        "name": "",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    body {\n        background-image: url(\"/jog1.jpg\"); // file path\n        background-repeat: no-repeat;\n        background-size: auto;\n        background-position: center;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 120,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    }
+]

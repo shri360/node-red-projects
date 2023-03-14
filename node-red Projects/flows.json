@@ -1,0 +1,148 @@
+[
+    {
+        "id": "cd6379fdc575de82",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "281f292040b7e99e",
+        "type": "mqtt in",
+        "z": "cd6379fdc575de82",
+        "name": "",
+        "topic": "led",
+        "qos": "2",
+        "datatype": "buffer",
+        "broker": "fc23170a49bbddf1",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 160,
+        "wires": [
+            [
+                "4ce6a13d6713c7e2",
+                "1d7d0e2445f5069e"
+            ]
+        ]
+    },
+    {
+        "id": "4ce6a13d6713c7e2",
+        "type": "rpi-gpio out",
+        "z": "cd6379fdc575de82",
+        "name": "led-out",
+        "pin": "21",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 490,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "1d7d0e2445f5069e",
+        "type": "debug",
+        "z": "cd6379fdc575de82",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "72cdd2dd5bd6e0ae",
+        "type": "inject",
+        "z": "cd6379fdc575de82",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 130,
+        "y": 260,
+        "wires": [
+            [
+                "4ce6a13d6713c7e2"
+            ]
+        ]
+    },
+    {
+        "id": "3aace697bcd90158",
+        "type": "inject",
+        "z": "cd6379fdc575de82",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 110,
+        "y": 340,
+        "wires": [
+            [
+                "4ce6a13d6713c7e2"
+            ]
+        ]
+    },
+    {
+        "id": "fc23170a49bbddf1",
+        "type": "mqtt-broker",
+        "name": "pi",
+        "broker": "192.168.43.127",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    }
+]

@@ -1,0 +1,199 @@
+[
+    {
+        "id": "fc0351ac.0e82",
+        "type": "tab",
+        "label": "RS485 HAT Modbus test",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ddca156f.2070a",
+        "type": "modbus-read",
+        "z": "fc0351ac.0e82",
+        "name": "",
+        "topic": "",
+        "showStatusActivities": true,
+        "logIOActivities": false,
+        "showErrors": true,
+        "unitid": "1",
+        "dataType": "InputRegister",
+        "adr": "0",
+        "quantity": "2",
+        "rate": "2000",
+        "rateUnit": "ms",
+        "delayOnStart": true,
+        "startDelayTime": "1",
+        "server": "75beb9d9.444ee",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": true,
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "e55889f625e2252c"
+            ],
+            [
+                "d0032da0.c6f7b8",
+                "1f7c95e968b3ea86"
+            ]
+        ]
+    },
+    {
+        "id": "d0032da0.c6f7b8",
+        "type": "modbus-response",
+        "z": "fc0351ac.0e82",
+        "name": "",
+        "registerShowMax": "8",
+        "x": 410,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "1f7c95e968b3ea86",
+        "type": "debug",
+        "z": "fc0351ac.0e82",
+        "name": "modbus",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "80064d0c5df1da9b",
+        "type": "ui_gauge",
+        "z": "fc0351ac.0e82",
+        "name": "",
+        "group": "726b3ebb0707dd55",
+        "order": 0,
+        "width": "6",
+        "height": "8",
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "degC",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 770,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "6c76ad6d20d880df",
+        "type": "debug",
+        "z": "fc0351ac.0e82",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "e55889f625e2252c",
+        "type": "buffer-parser",
+        "z": "fc0351ac.0e82",
+        "name": "decimal",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "uint16le",
+                "name": "item1",
+                "offset": 0,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "0.1",
+                "mask": ""
+            }
+        ],
+        "swap1": "swap16",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "value",
+        "resultTypeType": "output",
+        "multipleResult": false,
+        "fanOutMultipleResult": false,
+        "setTopic": true,
+        "outputs": 1,
+        "x": 590,
+        "y": 380,
+        "wires": [
+            [
+                "6c76ad6d20d880df",
+                "80064d0c5df1da9b"
+            ]
+        ]
+    },
+    {
+        "id": "75beb9d9.444ee",
+        "type": "modbus-client",
+        "name": "",
+        "clienttype": "simpleser",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB0",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": "1",
+        "commandDelay": "10",
+        "clientTimeout": "100",
+        "reconnectOnTimeout": false,
+        "reconnectTimeout": "",
+        "parallelUnitIdsAllowed": false
+    },
+    {
+        "id": "726b3ebb0707dd55",
+        "type": "ui_group",
+        "name": "ROOM TEMP  TC-K",
+        "tab": "b47dcd2ade5756f3",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "b47dcd2ade5756f3",
+        "type": "ui_tab",
+        "name": "MASIBUSS_409 TEMP INDICATOR",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]

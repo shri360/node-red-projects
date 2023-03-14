@@ -1,0 +1,28 @@
+[
+    {
+        "id": "9f780d9c377ade08",
+        "type": "mongodb out",
+        "z": "f4328d13764e062b",
+        "mongodb": "5c2eef840263db8c",
+        "name": "monoDB",
+        "collection": "minebias",
+        "payonly": true,
+        "upsert": false,
+        "multi": true,
+        "operation": "store",
+        "x": 820,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "5c2eef840263db8c",
+        "type": "mongodb",
+        "hostname": "cluster0.mijzu7e.mongodb.net",
+        "topology": "dnscluster",
+        "connectOptions": "",
+        "port": "27017",
+        "db": "minebia",
+        "name": "Minebea",
+        "credentials": {}
+    }
+]
